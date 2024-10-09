@@ -7,5 +7,6 @@ to produce the banner
 # Run
 
 cd scripts
+
 sh main.sh
 
