@@ -6,6 +6,10 @@ to produce the banner
 
 # Run
 
+copy required fonts to store dir
+cp *.zip store/
+
+
 cd scripts
 
 sh main.sh
