@@ -15,8 +15,13 @@ debug_info() {
     echo $extract_dir
 }
 
+
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
 print_info() {
-    echo "$identifier: $*"
+    echo "${red}$identifier: ${green}$*${reset}" 
 }
 
 read_confirm() {
@@ -61,7 +66,7 @@ count=0
 #for file in `find $store_dir -name '*.zip' -type f`; 
 for file in `eval $find_command`;
 do
-    echo "👉 $file"
+    echo "👉 ${green}$file${reset}"
     target=${file%.zip}
 
     unzip $file -d $extract_dir/${target##*/}

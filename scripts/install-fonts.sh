@@ -24,8 +24,13 @@ debug_info() {
     echo $font_dir
 }
 
+
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
 print_info() {
-    echo "$identifier: $*"
+    echo "${red}$identifier: ${green}$*${reset}"
 }
 
 print_erased() {
