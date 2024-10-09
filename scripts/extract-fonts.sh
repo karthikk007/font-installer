@@ -23,7 +23,7 @@ read_confirm() {
     choice=-1
     while true; do
         echo
-        read -n 1 -r -p "$1 (y, n): " confirm
+        read -n 1 -r -p "$1 [y]es, [n]o: " confirm
         echo
 
         case $confirm in
@@ -34,7 +34,7 @@ read_confirm() {
                 choice=0
                 break;;
             * )
-                echo "⛔️ Invalid!, Please answer yes(y) or no(n).";;
+                echo "⛔️ Invalid!, Please answer [y]es or [n]o.";;
         esac
     done
 
